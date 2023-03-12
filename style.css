@@ -1,0 +1,65 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Lab Grotesque", Arial, sans-serif;
+    background-color: darkgray;
+}
+main, section{
+    display: block;
+}
+img{
+    border-style: none;
+}
+
+/*layout*/
+.accordion{
+    max-width: 670px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    color: dodgerblue;
+}
+.accordion__heading{
+    font-size: 2rem;
+}
+.accordion__block{
+    display: block;
+    width: 500px;
+    margin-bottom: 2rem;
+}
+
+.accordion__block-heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 2rem;
+    cursor: pointer;
+}
+
+summary::-webkit-details-marker{display:none;}
+summary::-moz-list-bullet{list-style-type:none;}
+summary::marker{display:none;}
+
+summary {
+    display: block;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    position: relative;
+}
+summary:before {
+    right: .3em;
+    color: transparent;
+    background: url('img/right.svg') no-repeat 50% 50% / 1em 1em;
+    width: 1em;
+    height: 1em;
+    content: "";
+    position: absolute;
+    transition: transform .5s;
+}
+details[open] > summary:before {
+    transform: rotateZ(90deg);
+}
