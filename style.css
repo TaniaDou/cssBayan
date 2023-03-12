@@ -39,6 +39,9 @@ img{
     padding-left: 2rem;
     cursor: pointer;
 }
+.accordion__block-mem{
+    padding-left: 5rem;
+}
 
 summary::-webkit-details-marker{display:none;}
 summary::-moz-list-bullet{list-style-type:none;}
