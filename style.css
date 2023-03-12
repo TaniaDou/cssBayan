@@ -7,7 +7,8 @@ body{
     margin: 0;
     padding: 0;
     font-family: "Lab Grotesque", Arial, sans-serif;
-    background-color: darkgray;
+    background-color: #0e0e15e4;
+
 }
 main, section{
     display: block;
@@ -18,17 +19,23 @@ img{
 
 /*layout*/
 .accordion{
-    max-width: 670px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
     color: dodgerblue;
+    border: 1px dashed rgba(0,0,0,.5);
+    border-radius: 1rem;
 }
 .accordion__heading{
     font-size: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid dodgerblue;
 }
 .accordion__block{
-    display: block;
-    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
     margin-bottom: 2rem;
 }
 
@@ -40,7 +47,9 @@ img{
     cursor: pointer;
 }
 .accordion__block-mem{
-    padding-left: 5rem;
+    margin: 1rem auto;
+    max-width: 100%;
+    height: auto;
 }
 
 summary::-webkit-details-marker{display:none;}
@@ -49,7 +58,7 @@ summary::marker{display:none;}
 
 summary {
     display: block;
-    padding: 1rem 2rem;
+    padding: 1rem 0;
     cursor: pointer;
     position: relative;
 }
@@ -66,3 +75,34 @@ summary:before {
 details[open] > summary:before {
     transform: rotateZ(90deg);
 }
+
+@media  screen and (max-width: 1920px) {
+body{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+}
+@media (min-width: 819px) and (max-width: 1180px) {
+body{
+    font-size: 1rem;
+    font-weight: 500;
+}
+}
+@media (min-width: 321px) and (max-width: 820px) {
+    body{
+        font-size: .8rem;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 320px) {
+    body{
+        font-size: .6rem;
+    }
+    summary{
+        padding: 0;
+    }
+}
+
+
+
